@@ -14,26 +14,30 @@ public class Analytics extends OrderedIntList
 		System.out.println(number.low());
 		System.out.println(number.numInts());
 	}
+	
 	/**
 	 *returns the mean of the array 
 	 */
+	
 	public double mean()
 	{
 		if(array.length == 0)
 			return -1;
 		
-		int total = 0;
+		int sum = 0;
 		
 		for(int index = 0; index < array.length; index++)
 		{
-			total += array[index];
+			sum += array[index];
 		}
 		
-		return (double) total/array.length;
+		return (double) sum/array.length;
 	}
+	
 	/**
 	 * returns the median of the array
 	 */
+	
 	public int median()
 	{
 		if(array.length == 0)
@@ -46,49 +50,55 @@ public class Analytics extends OrderedIntList
 		
 		return array[(int) Math.ceil(((float) array.length/2))];
 	}
+	
 	/**
 	 * returns the highest value in the array
 	 */
+	
 	public int high()
 	{
 		if(array.length == 0)
 			return -1;
 		
-		int highest = Integer.MIN_VALUE;
+		int high = Integer.MIN_VALUE;
 		
 		for(Integer num : array)
 		{
-			if(num > highest)
+			if(num > high)
 			{
-				highest = num;
+				high = num;
 			}
 		}
 		
-		return highest;
+		return high;
 	}
+	
 	/**
 	 * return the lowest value of the array 
 	 */
+	
 	public int low()
 	{
 		if(array.length == 0)
 			return -1;
 		
-		int lowest = Integer.MAX_VALUE;
+		int low = Integer.MAX_VALUE;
 		
 		for(Integer num : array)
 		{
-			if(num < lowest)
+			if(num < low)
 			{
-				lowest = num;
+				low = num;
 			}
 		}
 		
-		return lowest;
+		return low;
 	}
+	
 	/**
 	 * returns the number of values in the array
 	 */
+	
 	public int numInts()
 	{
 		return array.length;	

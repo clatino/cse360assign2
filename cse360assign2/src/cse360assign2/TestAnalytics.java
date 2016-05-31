@@ -11,13 +11,13 @@ public class TestAnalytics
 	{
 		Analytics num = new Analytics();
 		
+		num.insert(1);
+		num.insert(2);
+		num.insert(3);
 		num.insert(4);
 		num.insert(5);
-		num.insert(6);
-		num.insert(7);
-		num.insert(8);
 
-		assertEquals(6, num.mean(), 0);
+		assertEquals(3, num.mean(), 0);
 	}
 
 	@Test
@@ -26,12 +26,12 @@ public class TestAnalytics
 		Analytics num = new Analytics();
 
 		num.insert(1);
-		num.insert(7);
-		num.insert(9);
-		num.insert(3);
-		num.insert(6);
+		num.insert(10);
+		num.insert(4);
+		num.insert(15);
+		num.insert(5);
 		
-		assertEquals(6, num.median());
+		assertEquals(5, num.median());
 		
 	}
 
@@ -40,11 +40,11 @@ public class TestAnalytics
 	{
 		Analytics num = new Analytics();
 
-		num.insert(1);
-		num.insert(6);
+		num.insert(2);
+		num.insert(4);
 		num.insert(8);
 		num.insert(12);
-		num.insert(3);
+		num.insert(1);
 		
 		assertEquals(12, num.high());
 	}
@@ -54,13 +54,13 @@ public class TestAnalytics
 	{
 		Analytics num = new Analytics();
 
-		num.insert(7);
-		num.insert(13);
-		num.insert(3);
-		num.insert(8);
+		num.insert(1);
+		num.insert(21);
+		num.insert(4);
 		num.insert(9);
+		num.insert(12);
 		
-		assertEquals(3, num.low());
+		assertEquals(1, num.low());
 	}
 
 	@Test
